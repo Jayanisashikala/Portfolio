@@ -59,19 +59,29 @@ router.post("/", async (req, res) => {
     receivedAt: new Date().toISOString(),
   };
 
+  // Try to save a local copy, but never let this block sending the email —
+  // on read-only hosts like Vercel, writing to disk will always fail, and
+  // that's fine as long as the email still goes out.
+  let saved = false;
   try {
     saveMessage(entry);
-    let emailed = false;
-    try {
-      emailed = await sendEmail(entry);
-    } catch (mailErr) {
-      console.error("Email delivery failed, message was still saved:", mailErr.message);
-    }
-    res.status(201).json({ ok: true, emailed });
-  } catch (err) {
-    console.error("Failed to save contact message:", err);
-    res.status(500).json({ error: "Something went wrong. Please try again later." });
+    saved = true;
+  } catch (saveErr) {
+    console.error("Could not save message to disk (continuing anyway):", saveErr.message);
   }
+
+  let emailed = false;
+  try {
+    emailed = await sendEmail(entry);
+  } catch (mailErr) {
+    console.error("Email delivery failed:", mailErr.message);
+  }
+
+  if (!saved && !emailed) {
+    return res.status(500).json({ error: "Something went wrong. Please try again later." });
+  }
+
+  res.status(201).json({ ok: true, saved, emailed });
 });
 
 module.exports = router;
