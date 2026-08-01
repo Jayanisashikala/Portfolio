@@ -153,6 +153,10 @@
   .skills-grid{display:grid; grid-template-columns:1fr 1fr; gap:50px;}
   .skill-col h3{font-size:0.95rem; color:var(--muted); font-weight:500; margin-bottom:22px; text-transform:uppercase; letter-spacing:0.04em; font-family:'JetBrains Mono',monospace;}
   .bar-row{margin-bottom:18px;}
+  .skill-list{list-style:none;}
+  .skill-list li{margin-bottom:16px; padding-left:18px; position:relative; color:var(--text); font-size:0.95rem; line-height:1.55;}
+  .skill-list li::before{content:'▸'; position:absolute; left:0; color:var(--blue);}
+  .skill-list li strong{color:var(--text); font-weight:600;}
   .bar-top{display:flex; justify-content:space-between; font-size:0.88rem; margin-bottom:7px;}
   .bar-top .pct{color:var(--blue-hover); font-family:'JetBrains Mono',monospace; font-size:0.8rem;}
   .bar-track{height:8px; background:var(--surface); border:1px solid var(--line); border-radius:6px; overflow:hidden;}
@@ -342,7 +346,7 @@
     <div class="btnrow">
       <a href="#projects" class="btn btn-primary">View My Work</a>
       <a href="#contact" class="btn btn-ghost">Get In Touch</a>
-      <a href="./assets/Jayani_Sashikala_CV.pdf" class="btn btn-ghost" target="_blank" rel="noopener">📥 Download CV</a>
+      <a href="./assets/Jayani_Sashikala_CV.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Download CV</a>
     </div>
   </div>
   <div>
@@ -360,8 +364,9 @@
     <div class="kicker center">About</div>
     <h2 class="sec-title center">About Me</h2>
     <div class="about-text">
-      <p>I am a final-year Data Science undergraduate with a strong interest in data analysis, artificial intelligence, and machine learning. Through academic projects and hands-on practical work, I've gained experience with Python, Java, Flutter, and applied ML techniques. I enjoy working with data, finding meaningful patterns, and using technology to solve real-world problems.</p>
-      <p>Beyond the classroom, I take on leadership and coordination roles across student societies — including the ITIA of Sri Lanka Technology Campus and the IEEE WIE Student Branch Affinity Group — while continuing to build my technical skills. I'm now looking for opportunities to apply my knowledge, gain industry experience, and contribute to real data science and AI projects.</p>
+      <p>I am a final year Data Science undergraduate at Sri Lanka Technology Campus (SLTC) with a strong interest in data analytics, machine learning, and business intelligence. I enjoy working with data to discover useful insights and solve real-world problems through technology.</p>
+      <p>Through my academic projects, I have gained practical experience in data cleaning, data analysis, machine learning, dashboard development, and big data processing. I have worked with tools and technologies such as Python, SQL, Power BI, PySpark, MLflow, and Docker to build data-driven solutions.</p>
+      <p>In addition to my technical skills, I actively participate in university activities and have taken leadership and coordination roles that have strengthened my teamwork, communication, and problem-solving abilities. I am always eager to learn new technologies, improve my skills, and apply my knowledge to real-world data science projects.</p>
     </div>
     <div class="about-cats">
       <div class="cat-card">
@@ -382,8 +387,8 @@
       </div>
     </div>
     <div class="stat-row">
-      <div class="stat"><div class="num">7+</div><div class="label">Projects Built</div></div>
-      <div class="stat"><div class="num">5+</div><div class="label">Certificates</div></div>
+      <div class="stat"><div class="num">5+</div><div class="label">Projects Built</div></div>
+      <div class="stat"><div class="num">4+</div><div class="label">Certificates</div></div>
       <div class="stat"><div class="num">3.69</div><div class="label">Current GPA</div></div>
       <div class="stat"><div class="num">2027</div><div class="label">Expected Graduation</div></div>
     </div>
@@ -405,16 +410,9 @@
       <div class="tl-item">
         <div class="tl-date">2020 — 2022</div>
         <div>
-          <div class="tl-role">G.C.E. Advanced Level — Index 2649179</div>
+          <div class="tl-role">G.C.E. Advanced Level</div>
           <div class="tl-org">Taxila Central College, Horana</div>
           <div class="tl-desc">Physical Science Stream — Chemistry (C), Combined Mathematics (S), Physics (S)</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date">2014 — 2019</div>
-        <div>
-          <div class="tl-role">G.C.E. Ordinary Level — Index 91235146</div>
-          <div class="tl-org">Royal College, Horana</div>
         </div>
       </div>
     </div>
@@ -428,27 +426,24 @@
     <div class="skills-grid">
       <div class="skill-col">
         <h3>Technical Skills</h3>
-        <div class="bar-row"><div class="bar-top"><span>Python</span><span class="pct">90%</span></div><div class="bar-track"><div class="bar-fill" style="--pct:90%"></div></div></div>
-        <div class="bar-row"><div class="bar-top"><span>Machine Learning (TensorFlow / Scikit-learn)</span><span class="pct">78%</span></div><div class="bar-track"><div class="bar-fill" style="--pct:78%"></div></div></div>
-        <div class="bar-row"><div class="bar-top"><span>SQL &amp; Databases</span><span class="pct">80%</span></div><div class="bar-track"><div class="bar-fill" style="--pct:80%"></div></div></div>
-        <div class="bar-row"><div class="bar-top"><span>Flutter &amp; Flask</span><span class="pct">75%</span></div><div class="bar-track"><div class="bar-fill" style="--pct:75%"></div></div></div>
-        <div class="bar-row"><div class="bar-top"><span>Docker &amp; MLOps Tooling</span><span class="pct">72%</span></div><div class="bar-track"><div class="bar-fill" style="--pct:72%"></div></div></div>
+        <ul class="skill-list">
+          <li><strong>Programming Languages</strong> – Python, Java</li>
+          <li><strong>Data Analysis &amp; Visualization</strong> – Pandas, NumPy, Matplotlib, Excel, Power BI</li>
+          <li><strong>Big Data &amp; Data Engineering</strong> – PySpark, Apache Airflow, MLflow</li>
+          <li><strong>Databases</strong> – MySQL, MongoDB</li>
+          <li><strong>Frameworks</strong> – Flask, Flutter</li>
+          <li><strong>Tools &amp; Platforms</strong> – Google Colab, Jupyter Notebook, Visual Studio Code, Docker, Jira</li>
+          <li><strong>Version Control</strong> – Git, GitHub, DAGsHub</li>
+        </ul>
       </div>
       <div class="skill-col">
-        <h3>Professional Skills</h3>
-        <div class="bar-row"><div class="bar-top"><span>Teamwork</span><span class="pct">90%</span></div><div class="bar-track"><div class="bar-fill" style="--pct:90%"></div></div></div>
-        <div class="bar-row"><div class="bar-top"><span>Leadership</span><span class="pct">88%</span></div><div class="bar-track"><div class="bar-fill" style="--pct:88%"></div></div></div>
-        <div class="bar-row"><div class="bar-top"><span>Communication</span><span class="pct">87%</span></div><div class="bar-track"><div class="bar-fill" style="--pct:87%"></div></div></div>
-        <div class="bar-row"><div class="bar-top"><span>Time Management</span><span class="pct">85%</span></div><div class="bar-track"><div class="bar-fill" style="--pct:85%"></div></div></div>
-        <div class="bar-row"><div class="bar-top"><span>Critical Thinking</span><span class="pct">86%</span></div><div class="bar-track"><div class="bar-fill" style="--pct:86%"></div></div></div>
+        <h3>Soft Skills</h3>
+        <ul class="skill-list">
+          <li><strong>Team Collaboration &amp; Leadership</strong><br>Works effectively in teams and takes the initiative to achieve project goals.</li>
+          <li><strong>Project Management</strong><br>Plans, organizes, and completes tasks efficiently to meet deadlines.</li>
+          <li><strong>Learning Agility</strong><br>Quickly learns new tools, technologies, and techniques to improve performance.</li>
+        </ul>
       </div>
-    </div>
-    <div class="chips">
-      <span class="chip">Figma</span><span class="chip">Power BI</span><span class="chip">Pandas</span>
-      <span class="chip">Git &amp; GitHub</span><span class="chip">DagsHub</span><span class="chip">VS Code</span>
-      <span class="chip">Google Colab</span><span class="chip">Jupyter Notebook</span>
-      <span class="chip">Apache Spark</span><span class="chip">Apache Hadoop</span><span class="chip">Apache Airflow</span>
-      <span class="chip">MongoDB</span><span class="chip">PostgreSQL</span><span class="chip">MySQL</span>
     </div>
   </div>
 </section>
@@ -489,43 +484,29 @@
 
       <div class="proj-card">
         <div class="proj-thumb">
-          <img src="assets/projects/wisec.jpg" alt="WiSec dashboard concept — network scan, security score, and vulnerability list" loading="lazy">
-          <span class="thumb-badge">2025</span>
+          <img src="assets/projects/ecommerce-pipeline.jpg" alt="Big Data E-Commerce Analytics Pipeline — Bronze-Silver-Gold architecture diagram" loading="lazy">
+          <span class="thumb-badge">2026</span>
         </div>
         <div class="proj-body">
-          <h3>WiSec</h3>
-          <div class="proj-sub">Intelligent Wi-Fi Security Vulnerability Scanner · Group Project</div>
-          <p>Built a web app that scans nearby Wi-Fi networks and uses machine learning to detect weak security settings, showing a real-time dashboard with a security score and remediation steps.</p>
-          <div class="proj-tags"><span>python</span><span>scapy</span><span>tensorflow</span><span>flask</span><span>sqlite</span></div>
-          <div class="proj-links"><span class="noref">Repository not public</span></div>
+          <h3>Big Data E-Commerce Analytics Pipeline</h3>
+          <div class="proj-sub">End-to-End Big Data Pipeline · Group Project</div>
+          <p>Built a scalable end-to-end analytics pipeline to process over 540,000 UK e-commerce transactions using a Bronze–Silver–Gold architecture. Applied data cleaning, feature engineering, and distributed processing with PySpark to transform raw transactional data into analytics-ready datasets. Stored curated data in MongoDB and performed business analytics to uncover revenue trends, customer behavior, product performance, and regional sales insights.</p>
+          <div class="proj-tags"><span>pyspark</span><span>mongodb-atlas</span><span>spark-sql</span><span>google-colab</span><span>etl</span><span>data-engineering</span></div>
+          <div class="proj-links"><a href="https://github.com/Jayanisashikala/Big-Data-E-Commerce-Analytics-Pipeline" target="_blank" rel="noopener">GitHub</a></div>
         </div>
       </div>
 
       <div class="proj-card">
         <div class="proj-thumb">
-          <img src="assets/projects/cinemaverse.jpg" alt="CinemaVerse homepage — movie ticket booking hero section" loading="lazy">
+          <img src="assets/projects/retail-dw-bi.jpg" alt="Retail Sales Data Warehouse — Power BI dashboard concept" loading="lazy">
           <span class="thumb-badge">2025</span>
         </div>
         <div class="proj-body">
-          <h3>CinemaVerse</h3>
-          <div class="proj-sub">Online Movie Ticket Booking System · Group Project</div>
-          <p>Built a full movie ticket booking platform with seat selection, secure online payments, and an admin dashboard for managing showtimes — delivered on a strict 6-week Agile schedule.</p>
-          <div class="proj-tags"><span>html</span><span>css</span><span>javascript</span><span>python</span><span>mysql</span></div>
-          <div class="proj-links"><a href="https://github.com/Jayanisashikala/Online-Movie-Ticket-Booking-System" target="_blank" rel="noopener">GitHub</a></div>
-        </div>
-      </div>
-
-      <div class="proj-card">
-        <div class="proj-thumb">
-          <img src="assets/projects/signfy.jpg" alt="SignFy landing page design — hand sign communication concept" loading="lazy">
-          <span class="thumb-badge">2025</span>
-        </div>
-        <div class="proj-body">
-          <h3>SignFy</h3>
-          <div class="proj-sub">Hand Sign Detection App — UX/UI Design · Group Project</div>
-          <p>Figma prototype for a hand sign recognition app helping people with hearing or speech impairments communicate in real time, with sign-to-text/voice translation and multi-language support.</p>
-          <div class="proj-tags"><span>figma</span><span>ux-ui</span></div>
-          <div class="proj-links"><span class="noref">Design prototype</span></div>
+          <h3>Retail Sales Data Warehouse &amp; Business Intelligence Dashboard</h3>
+          <div class="proj-sub">Data Warehousing &amp; Business Intelligence Case Study · Group Project</div>
+          <p>Designed and implemented a retail data warehouse to transform transactional sales data into analytics-ready information — building an ETL pipeline, designing a star schema, and creating interactive Power BI dashboards to analyze revenue trends, regional performance, product insights, and customer segmentation.</p>
+          <div class="proj-tags"><span>sql</span><span>power-bi</span><span>etl</span></div>
+          <div class="proj-links"><a href="https://github.com/Jayanisashikala/Retail-Sales-Data-Warehouse-Business-Intelligence-Dashboard" target="_blank" rel="noopener">GitHub</a></div>
         </div>
       </div>
 
@@ -567,19 +548,29 @@
     <h2 class="sec-title center">Services</h2>
     <div class="service-grid">
       <div class="service-card">
-        <div class="service-icon">🤖</div>
-        <h3>Build Explainable AI</h3>
-        <p>Building ML models that don't just predict — they explain their reasoning in plain language, as in the Liyaa project.</p>
+        <div class="service-icon">📊</div>
+        <h3>Data Analysis</h3>
+        <p>Analyze datasets to uncover trends, patterns, and actionable business insights using Python, SQL, and Excel.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">📊</div>
-        <h3>Data Analysis &amp; BI Dashboards</h3>
-        <p>Turning raw datasets into clear dashboards and reports using Python, Pandas, and Power BI.</p>
+        <div class="service-icon">📈</div>
+        <h3>Data Visualization</h3>
+        <p>Create interactive dashboards and visual reports using Power BI and Python to communicate data effectively.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🤖</div>
+        <h3>Machine Learning</h3>
+        <p>Build and evaluate predictive models for classification and regression using Scikit-learn.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🧹</div>
+        <h3>Data Cleaning &amp; Preprocessing</h3>
+        <p>Prepare high-quality datasets through data cleaning, transformation, feature engineering, and preprocessing.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">⚙️</div>
-        <h3>MLOps &amp; Deployment</h3>
-        <p>Automating the ML lifecycle end-to-end — experiment tracking, pipelines, and Docker-based API deployment.</p>
+        <h3>ETL &amp; Data Engineering</h3>
+        <p>Develop ETL workflows and data pipelines to collect, process, and organize data for analytics and reporting.</p>
       </div>
     </div>
   </div>
@@ -633,6 +624,11 @@
         <div class="cissuer">Ministry of Education</div>
         <div class="cdetail">Completed a four-month course covering computer fundamentals, Windows 10, Java programming, and NetBeans.</div>
       </div>
+      <div class="cert-card">
+        <span class="cyear">2025</span>
+        <div class="cname">SQL (Basic, Intermediate) Certification</div>
+        <div class="cissuer">HackerRank</div>
+      </div>
     </div>
   </div>
 </section>
@@ -647,6 +643,13 @@
         <div>
           <div class="tl-role">Assistant Secretary, ITIA Career Version 1.0</div>
           <div class="tl-org">ITIA of Sri Lanka Technology Campus</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2026</div>
+        <div>
+          <div class="tl-role">Secretary Team Member</div>
+          <div class="tl-org">Sports Council of Sri Lanka Technology Campus (SLTC)</div>
         </div>
       </div>
       <div class="tl-item">

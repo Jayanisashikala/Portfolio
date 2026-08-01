@@ -5,3 +5,4 @@ backend/data/messages.json
 Thumbs.db
 .vscode/
 *.log
+venv/
